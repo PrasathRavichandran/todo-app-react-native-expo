@@ -1,15 +1,12 @@
-import { Text, View } from "react-native";
+import ListItem from "@/components/list-item";
+import ThemeToggler from "@/components/theme-toggler";
+import Box from "@/utils/ui/Box";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <Box flex={1} justifyContent="center" bg={"background"} px={"m"}>
+      <ListItem />
+      <ThemeToggler/>
+    </Box>
   );
 }
