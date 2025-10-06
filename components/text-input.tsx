@@ -4,16 +4,22 @@ import Box from "@/utils/ui/Box";
 import StyledIonicons from "@/utils/ui/StyledIonIcons";
 import StyledPressable from "@/utils/ui/StyledPressable";
 import StyledTextInput from "@/utils/ui/StyledTextInput";
+import { DrawerNavigationProp } from "@react-navigation/drawer";
 import { useTheme } from "@shopify/restyle";
-import { useState } from "react";
+import { useNavigation } from "expo-router";
+import { useCallback, useState } from "react";
 
 const CustomTextInput = () => {
   const { mode } = useCustomTheme();
   const theme = useTheme<Theme>();
+  const navigation = useNavigation<DrawerNavigationProp<{}>>();
 
   const [search, setSearch] = useState("");
 
-  const onToggleMenu = () => {};
+  const onToggleMenu = useCallback(()=>{
+    navigation.openDrawer();
+  },[navigation]);
+
   return (
     <Box
       bg={"textInput"}

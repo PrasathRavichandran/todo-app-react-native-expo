@@ -7,10 +7,13 @@ const palette = {
   muted300: "#d4d4d4",
   muted500: "#737373",
 
-  blue400:"#60a5fa",
-  blue500:"#3b82f6",
-  lightBlue50:"#f0f9ff",
-  
+  blue50: "#eff6ff",
+  blue200: "#bfdbfe",
+  blue400: "#60a5fa",
+  blue500: "#3b82f6",
+  lightBlue50: "#f0f9ff",
+  darkBlue800: "#002851",
+
   darkText: "#27272a",
   white: "#FFFFFF",
   black: "#000000",
@@ -21,6 +24,11 @@ const theme = createTheme({
     background: palette.warmGray50,
     text: palette.darkText,
     textInput: palette.primary900,
+
+    sidebarBg: palette.blue50,
+    sidebarItemBg: palette.blue200,
+
+    transparent: "transparent",
 
     borderColor: palette.blue500,
     trackColor: palette.blue500,
@@ -47,9 +55,13 @@ const theme = createTheme({
       fontSize: 16,
       lineHeight: 24,
     },
-    list:{
+    list: {
       fontSize: 18,
-      color:"text"
+      color: "text",
+    },
+    sidebarHeading: {
+      fontSize: 20,
+      fontWeight: "bold",
     },
     defaults: {},
   },
@@ -79,7 +91,7 @@ const theme = createTheme({
       size: 36,
       color: "white",
     },
-  }
+  },
 });
 
 export type Theme = typeof theme;
@@ -92,6 +104,8 @@ export const darkTheme: Theme = {
     text: palette.white,
     textInput: palette.warmGray50,
     borderColor: palette.blue400,
+    sidebarBg: palette.darkBlue800,
+    sidebarItemBg: palette.blue400,
   },
 };
 
