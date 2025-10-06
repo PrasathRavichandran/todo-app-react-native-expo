@@ -7,10 +7,10 @@ import { Checkbox } from "expo-checkbox";
 import { useEffect, useState } from "react";
 
 import Animated, {
-    Easing,
-    useAnimatedStyle,
-    useSharedValue,
-    withTiming,
+  Easing,
+  useAnimatedStyle,
+  useSharedValue,
+  withTiming,
 } from "react-native-reanimated";
 
 const AnimatedBox = Animated.createAnimatedComponent(Box);
@@ -43,7 +43,7 @@ function ListItem() {
         style={{ margin: 8 }}
         value={isChecked}
         onValueChange={setIsChecked}
-        color={mode ? theme.colors.trackColor : theme.colors.borderColor}
+        color={"#3b82f6"}
       />
       <Box flexDirection="row" alignItems="center">
         <Text variant={"list"}>This is the first task and it is for test.</Text>

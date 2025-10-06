@@ -3,10 +3,14 @@ import { createTheme } from "@shopify/restyle";
 const palette = {
   warmGray50: "#fafaf9",
   primary900: "#164e63",
-  fuchsia400: "#e879f9",
+
   muted300: "#d4d4d4",
   muted500: "#737373",
+
+  blue400:"#60a5fa",
+  blue500:"#3b82f6",
   lightBlue50:"#f0f9ff",
+  
   darkText: "#27272a",
   white: "#FFFFFF",
   black: "#000000",
@@ -16,12 +20,10 @@ const theme = createTheme({
   colors: {
     background: palette.warmGray50,
     text: palette.darkText,
-
     textInput: palette.primary900,
 
-    borderColor: palette.muted500,
-
-    trackColor: palette.fuchsia400,
+    borderColor: palette.blue500,
+    trackColor: palette.blue500,
     white: palette.white,
     black: palette.black,
   },
@@ -89,6 +91,7 @@ export const darkTheme: Theme = {
     background: palette.primary900,
     text: palette.white,
     textInput: palette.warmGray50,
+    borderColor: palette.blue400,
   },
 };
 
