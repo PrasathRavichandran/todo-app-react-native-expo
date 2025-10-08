@@ -23,12 +23,15 @@ const theme = createTheme({
   colors: {
     background: palette.warmGray50,
     text: palette.darkText,
-    textInput: palette.primary900,
+    textInput: palette.darkBlue800,
 
     sidebarBg: palette.blue50,
     sidebarItemBg: palette.blue200,
 
     transparent: "transparent",
+
+    checkboxFill: palette.darkBlue800,
+    checkFill: palette.white,
 
     borderColor: palette.blue500,
     trackColor: palette.blue500,
@@ -36,6 +39,7 @@ const theme = createTheme({
     black: palette.black,
   },
   spacing: {
+    xs: 4,
     s: 8,
     m: 16,
     l: 24,
@@ -106,6 +110,8 @@ export const darkTheme: Theme = {
     borderColor: palette.blue400,
     sidebarBg: palette.darkBlue800,
     sidebarItemBg: palette.blue400,
+    checkboxFill: palette.warmGray50,
+    checkFill: palette.primary900,
   },
 };
 
